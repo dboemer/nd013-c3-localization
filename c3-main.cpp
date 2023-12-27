@@ -219,18 +219,18 @@ int main(){
 			// TODO: (Filter scan using voxel filter)
 			pcl::VoxelGrid<PointT> vg;
 			vg.setInputCloud(scanCloud);
-			double filterRes = 0.5;
+			double filterRes = 1;
 			vg.setLeafSize(filterRes, filterRes, filterRes);
 			typename pcl::PointCloud<PointT>::Ptr cloudFiltered (new pcl::PointCloud<PointT>);
 			vg.filter(*cloudFiltered);
 
 			// TODO: Find pose transform by using ICP or NDT matching
 			pcl::NormalDistributionsTransform<pcl::PointXYZ, pcl::PointXYZ> ndt;
-			ndt.setTransformationEpsilon(.0001);
-			ndt.setStepSize(1);
-			ndt.setResolution(1);
+			ndt.setTransformationEpsilon(1e-3);
+			ndt.setResolution(5);
+			ndt.setMaximumIterations(100);
 			ndt.setInputTarget(mapCloud);
-			Eigen::Matrix4d transform = NDT(ndt, cloudFiltered, pose, 3);
+			Eigen::Matrix4d transform = NDT(ndt, cloudFiltered, pose, 100);
 			pose = getPose(transform);
 
 			// TODO: Transform scan so it aligns with ego's actual pose and render that scan
