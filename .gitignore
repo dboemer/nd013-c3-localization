@@ -6,3 +6,4 @@ Makefile
 libcarla-install/
 make-libcarla-install.sh
 rpclib/
+cloud_loc
