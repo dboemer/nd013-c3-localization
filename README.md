@@ -1,8 +1,8 @@
 # Instructions to Execute the Project
 
-1. Navigate to the **c3-project** directory containing the project starter files.
+1. Navigate to the project files.
     ```bash
-    cd nd0013_cd2693_Exercise_Starter_Code/Lesson_7_Project_Scan_Matching_Localization/c3-project
+    cd nd013-c3-localization
     ```
 
 
