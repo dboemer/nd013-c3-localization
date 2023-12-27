@@ -57,4 +57,4 @@ If you encounter core dump on start up, just rerun and try again. Crash doesn't 
 
 Based on the NDT method, the expected result is illustrated below, i.e., distance of at least 170 m travelled without a pose error above 1.2 m at medium speed.
 
-<img src="img/res.png" width="600"/>
+<img src="res.png" width="600"/>
