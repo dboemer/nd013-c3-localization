@@ -227,7 +227,6 @@ int main(){
 			// TODO: Find pose transform by using ICP or NDT matching
 			pcl::NormalDistributionsTransform<pcl::PointXYZ, pcl::PointXYZ> ndt;
 			ndt.setTransformationEpsilon(1e-3);
-			//ndt.setStepSize(1);
 			ndt.setResolution(5);
 			ndt.setInputTarget(mapCloud);
 			Eigen::Matrix4d transform = NDT(ndt, cloudFiltered, pose, 100);

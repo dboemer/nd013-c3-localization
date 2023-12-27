@@ -8,17 +8,17 @@
 
 2. Review the starter files. You must find the following files in your current working directory.
     ```bash
-    .
+
     ├── CMakeLists.txt
     ├── README.md
     ├── c3-main.cpp
     ├── helper.cpp
     ├── helper.h
-    ├── libcarla-install/
+    ├── libcarla-install/ (not included for minimal size)
     ├── make-libcarla-install.sh
     ├── map.pcd
     ├── map_loop.pcd
-    ├── rpclib
+    ├── rpclib (not included for minimal size)
     └── run_carla.sh
     ```
 
@@ -28,10 +28,6 @@
     chmod +x make-libcarla-install.sh
     ./make-libcarla-install.sh
     ```
-
-
-
-4. Update the ** c3-main.cpp** file per the `TODO` markers and the classroom instructions. 
 
 
 5. Compile the project using the following commands. 
@@ -57,7 +53,8 @@
 If you encounter core dump on start up, just rerun and try again. Crash doesn't happen more than a couple of times. 
 
 
+# Results
 
-Here is a glimpse of the running project.
+Based on the NDT method, the expected result is illustrated below, i.e., distance of at least 170 m travelled without a pose error above 1.2 m at medium speed.
 
-![a glimpse of the running project](../../assets/L7_Project.png)
+<img src="img/res.png" width="600"/>
