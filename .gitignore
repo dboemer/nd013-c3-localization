@@ -1,4 +1,8 @@
 .vscode/
 CMakeCache.txt
 CMakeFiles/
+cmake_install.cmake
 Makefile
+libcarla-install/
+make-libcarla-install.sh
+rpclib/
