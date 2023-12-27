@@ -103,7 +103,6 @@ Eigen::Matrix4d NDT(pcl::NormalDistributionsTransform<pcl::PointXYZ, pcl::PointX
 
 	Eigen::Matrix4f init_guess = transform3D(startingPose.rotation.yaw, startingPose.rotation.pitch, startingPose.rotation.roll, startingPose.position.x, startingPose.position.y, startingPose.position.z).cast<float>();
 
-  	// Setting max number of registration iterations.
   	ndt.setMaximumIterations(iterations);
 	ndt.setInputSource(source);
   	
