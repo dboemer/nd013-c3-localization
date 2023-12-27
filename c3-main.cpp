@@ -219,7 +219,7 @@ int main(){
 			// TODO: (Filter scan using voxel filter)
 			pcl::VoxelGrid<PointT> vg;
 			vg.setInputCloud(scanCloud);
-			double filterRes = 1;
+			double filterRes = 0.5;
 			vg.setLeafSize(filterRes, filterRes, filterRes);
 			typename pcl::PointCloud<PointT>::Ptr cloudFiltered (new pcl::PointCloud<PointT>);
 			vg.filter(*cloudFiltered);
@@ -227,6 +227,7 @@ int main(){
 			// TODO: Find pose transform by using ICP or NDT matching
 			pcl::NormalDistributionsTransform<pcl::PointXYZ, pcl::PointXYZ> ndt;
 			ndt.setTransformationEpsilon(1e-3);
+			//ndt.setStepSize(1);
 			ndt.setResolution(5);
 			ndt.setMaximumIterations(100);
 			ndt.setInputTarget(mapCloud);
