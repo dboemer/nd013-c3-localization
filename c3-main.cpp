@@ -229,7 +229,6 @@ int main(){
 			ndt.setTransformationEpsilon(1e-3);
 			//ndt.setStepSize(1);
 			ndt.setResolution(5);
-			ndt.setMaximumIterations(100);
 			ndt.setInputTarget(mapCloud);
 			Eigen::Matrix4d transform = NDT(ndt, cloudFiltered, pose, 100);
 			pose = getPose(transform);
